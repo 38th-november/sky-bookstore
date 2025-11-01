@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  min-width: 382px;
 
   // 태블릿 (768px 이상)
   @media (min-width: 768px) {
@@ -85,8 +86,6 @@
   .weather-content {
     position: relative;
     z-index: 2;
-    gap: 8px;
-    min-width: 382px;
     color: #ffffff;
   }
 

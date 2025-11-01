@@ -19,12 +19,13 @@ function ShareButtons({ book, weather, weatherIcon }: ShareButtonsProps) {
   // 카카오톡 공유 핸들러
   const handleKakaoShare = () => {
     if (!window.Kakao) {
-      alert("카카오톡 공유 기능을 사용할 수 없습니다. 페이지를 새로고침 해주세요.");
+      alert(
+        "카카오톡 공유 기능을 사용할 수 없습니다. 페이지를 새로고침 해주세요."
+      );
       return;
     }
 
     if (!window.Kakao.isInitialized()) {
-      console.error("Kakao SDK not initialized");
       alert("카카오 SDK가 초기화되지 않았습니다. 개발 서버를 재시작해주세요.");
       return;
     }
@@ -32,12 +33,6 @@ function ShareButtons({ book, weather, weatherIcon }: ShareButtonsProps) {
     try {
       // 이미지 URL을 HTTPS로 변환 (카카오는 HTTPS만 허용)
       const imageUrl = book.thumbnail.replace(/^http:/, "https:");
-
-      console.log("카카오 공유 시작:", {
-        weather,
-        title: book.title,
-        imageUrl,
-      });
 
       window.Kakao.Share.sendDefault({
         objectType: "feed",
@@ -60,16 +55,15 @@ function ShareButtons({ book, weather, weatherIcon }: ShareButtonsProps) {
           },
         ],
       });
-
-      console.log("카카오 공유 팝업이 열렸습니다.");
-      // 참고: 'kakaolink' 스킴 에러는 PC 환경에서 정상입니다. 팝업이 열리면 성공!
     } catch (error) {
       console.error("카카오톡 공유 실패:", error);
 
       // 에러 타입에 따른 상세 메시지
       if (error instanceof Error) {
         if (error.message.includes("domain")) {
-          alert("도메인이 등록되지 않았습니다.\n\n카카오 개발자 콘솔(https://developers.kakao.com)에서:\n1. 내 애플리케이션 선택\n2. 플랫폼 > Web 플랫폼 등록\n3. 사이트 도메인: http://localhost:5173");
+          alert(
+            "도메인이 등록되지 않았습니다.\n\n카카오 개발자 콘솔(https://developers.kakao.com)에서:\n1. 내 애플리케이션 선택\n2. 플랫폼 > Web 플랫폼 등록\n3. 사이트 도메인: http://localhost:5173"
+          );
         } else {
           alert(`카카오톡 공유 실패: ${error.message}`);
         }
@@ -137,7 +131,12 @@ function ShareButtons({ book, weather, weatherIcon }: ShareButtonsProps) {
           onClick={handleCopyLink}
           title="링크 복사"
         >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
             <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
           </svg>

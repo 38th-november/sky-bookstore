@@ -12,14 +12,7 @@ function App() {
     if (window.Kakao && !window.Kakao.isInitialized()) {
       // 카카오 JavaScript 키
       const kakaoKey = import.meta.env.VITE_KAKAO_KEY;
-
-      if (!kakaoKey) {
-        console.warn("VITE_KAKAO_KEY가 설정되지 않았습니다. .env 파일을 확인하세요.");
-        return;
-      }
-
       window.Kakao.init(kakaoKey);
-      console.log("Kakao SDK 초기화 완료:", window.Kakao.isInitialized());
     }
   }, []);
 
