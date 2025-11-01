@@ -1,0 +1,122 @@
+.advertisement-container {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.advertisement-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.advertisement-content {
+  background: linear-gradient(135deg, #dad5b7 0%, #b3b5b3 100%);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px;
+  gap: 20px;
+
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
+  }
+
+  @media (min-width: 767px) {
+    flex-direction: row;
+    padding: 30px;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.advertisement-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  background-color: #ffffff;
+  padding: 10px;
+  object-fit: contain;
+
+  @media (min-width: 768px) {
+    width: 120px;
+    height: 120px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+.advertisement-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  @media (min-width: 768px) {
+    align-items: flex-start;
+  }
+}
+
+.advertisement-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #414141;
+  letter-spacing: 1px;
+
+  @media (min-width: 768px) {
+    font-size: 21px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 23px;
+  }
+}
+
+.advertisement-description {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+  color: #414141;
+  letter-spacing: -1px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.advertisement-cta {
+  background: rgba(50, 75, 50, 0.2);
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+  letter-spacing: -1px;
+
+  .advertisement-content:hover & {
+    background: rgba(27, 27, 27, 0.3);
+    transform: translateX(4px);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+}

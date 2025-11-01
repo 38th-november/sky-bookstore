@@ -1,0 +1,136 @@
+.header-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f7ed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  // 태블릿 (768px 이상)
+  @media (min-width: 768px) {
+    padding: 40px;
+  }
+
+  // 데스크탑 (1024px 이상)
+  @media (min-width: 1024px) {
+    padding: 50px;
+  }
+}
+
+.header-logo {
+  width: 130px;
+  height: auto;
+  transition: width 0.3s ease;
+  cursor: pointer;
+
+  // 태블릿 (768px 이상)
+  @media (min-width: 768px) {
+    width: 150px;
+  }
+
+  // 데스크탑 (1024px 이상)
+  @media (min-width: 1024px) {
+    width: 160px;
+  }
+}
+
+.header-weather-box {
+  position: relative;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #333;
+  letter-spacing: -1px;
+  overflow: hidden;
+
+  // 태블릿 (768px 이상)
+  @media (min-width: 768px) {
+    font-size: 14px;
+    height: 120px;
+  }
+
+  // 데스크탑 (1024px 이상)
+  @media (min-width: 1024px) {
+    font-size: 15px;
+    height: 150px;
+  }
+
+  .weather-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    transform: scale(1.1);
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .weather-content {
+    position: relative;
+    z-index: 2;
+    gap: 8px;
+    min-width: 382px;
+    color: #ffffff;
+  }
+
+  .today-weather-text {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #1f1f1f39;
+  }
+
+  .weather-icon {
+    vertical-align: middle;
+    width: 30px;
+    filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.8));
+
+    // 태블릿 (768px 이상)
+    @media (min-width: 768px) {
+      width: 50px;
+    }
+
+    // 데스크탑 (1024px 이상)
+    @media (min-width: 1024px) {
+      width: 55px;
+    }
+  }
+}
+
+.dark-mode-toggle {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: rotate(20deg) scale(1.1);
+  }
+
+  &:active {
+    transform: rotate(0) scale(0.95);
+  }
+}

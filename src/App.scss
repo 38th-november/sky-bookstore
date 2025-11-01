@@ -1,0 +1,205 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+#root {
+  width: 100%;
+  min-width: 370px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// 다크 모드 스타일
+.dark-mode {
+  body {
+    background-color: #272d27;
+    color: #e0e0e0;
+  }
+
+  .content {
+    background-color: #272d27;
+  }
+
+  .today-weather-text {
+    color: #ffffff;
+  }
+
+  .header-container {
+    background-color: #272d27;
+  }
+
+  .header-weather-box {
+    color: #e0e0e0;
+  }
+
+  .home-container {
+    color: #e0e0e0;
+  }
+
+  .loading-container {
+    color: #aaa;
+  }
+
+  .recommend-book-list-title {
+    color: #ffffff;
+  }
+
+  .recommend-book-list li {
+    background-color: #2a3230;
+    border: 1px solid #1c1c1c;
+
+    &:hover {
+      background-color: #333;
+      border-color: #b9a746;
+    }
+  }
+
+  .recommend-book-title {
+    color: #b9a746;
+  }
+
+  .recommend-book-authors {
+    color: #e2e2e2;
+  }
+
+  .book-card-hover {
+    background-color: rgba(42, 42, 42, 0.95);
+  }
+
+  .book-contents {
+    color: #e0e0e0;
+  }
+
+  .load-more-button {
+    background-color: transparent;
+    color: #b9a746;
+    border-color: #b9a746;
+
+    &:hover {
+      background-color: #333;
+      color: #b9a746;
+    }
+  }
+
+  .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal-content {
+    background: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  .modal-close-button {
+    color: #aaa;
+
+    &:hover {
+      background: #3a3a3a;
+      color: #e0e0e0;
+    }
+  }
+
+  .modal-title {
+    color: #b9a746;
+  }
+
+  .modal-authors {
+    color: #ffffff;
+
+    .book-authors-title {
+      color: #b9a746;
+    }
+  }
+
+  .modal-contents {
+    .book-introduce-title {
+      color: #b9a746;
+    }
+
+    p {
+      color: #ffffff;
+    }
+  }
+
+  .modal-google-button {
+    background-color: #b9a746;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(173, 80, 137, 0.3);
+    }
+  }
+
+  .modal-detail-button {
+    background-color: #2a2a2a;
+    color: #b9a746;
+    border: 1px solid #b9a746;
+
+    &:hover {
+      background-color: #3a3a3a;
+    }
+  }
+
+  .footer-container {
+    background-color: #272d27;
+
+    .footer-text {
+      color: #fff;
+    }
+  }
+
+  .advertisement-content {
+    background: linear-gradient(135deg, #768073 0%, #272a2e 100%);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+
+    &:hover {
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .advertisement-logo {
+    background: #f0f0f0;
+  }
+
+  .advertisement-title {
+    color: #ffffff;
+  }
+
+  .advertisement-description {
+    color: #ffffff;
+  }
+
+  .advertisement-cta {
+    background: rgba(255, 255, 255, 0.225);
+  }
+
+  .share-buttons-container {
+    border-top: 1px solid #b9a746;
+
+    span {
+      color: #b9a746;
+    }
+  }
+}
